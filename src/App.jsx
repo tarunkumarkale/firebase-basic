@@ -4,6 +4,12 @@ import Testing from './realtimedatabase/testing';
 import Createacc from './Auth/Createacc';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Register from './Pages/Register';
+import Login from './Pages/Login';
+import Navbar from './Navbar';
+import AddNewBooks from './Pages/AddNewBooks';
+import Home from './Pages/Home';
+
+
 
 
 const App = () => {
@@ -28,17 +34,24 @@ Project */}
 
 {/* first make auth in pages folder Register components */}
 {/* second make auth in pages folder Login components */}
+{/* third  google auth  in Login page*/}
+
+{/* four curd now photo ,image, go to storage*/}
+{/* four curd now text form me data go to firestore database */}
 
 
 
 
 <BrowserRouter  basename="/firebase-basic">
 
-
+<Navbar></Navbar>
 <Routes>
 
-<Route path='/' element={<h1>home </h1>}/>
+<Route path='/' element={<Home/>}/>
 <Route path='/Register' element={<Register/>}/>
+<Route path='/Login' element={<Login/>}/>
+
+<Route path='/book/list' element={<AddNewBooks/>}/>
 
 
 
